@@ -1,0 +1,65 @@
+﻿
+@model List<BibliaFrontEnd.Models.Livro>
+@using BibliaFrontEnd.Models;
+@using System.Web.Script.Serialization;
+
+@{
+    ViewBag.Title = "Home Page";
+    //var json = new JavaScriptSerializer().Serialize(Model);
+}
+
+  @*foreach (Livro livro in Model)
+   {
+
+        <div>ID: @livro.Id</div>
+        <div>Ordem: @livro.Ordem</div>
+        <div>Nome: <a href="/Livros/@livro.Id">@livro.Nome</a></div>
+        <div>Sigla: @livro.Sigla</div>
+        <div>Testamento: @livro.Testamento</div>
+        <br />
+   }
+    *@
+
+<div class="jumbotron">
+    @RenderPage("Livros.cshtml")
+</div>
+
+<style type="text/css">
+    p {
+        font-size: 2rem;
+        word-break: break-word;
+        font-family: 'Merriweather', serif;
+        font-weight: 300;
+        line-height: 1.47em;
+    }
+</style>
+<div class="container jumbotron" id="versiculos" style="padding-top: 20px;">
+
+</div>
+
+
+<script type="text/javascript">
+
+    var json = null;
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+        jQuery.ajax(
+        {
+            type: 'GET',
+                url: '/Livros/4/16/1',
+            dataType: 'json',
+            cache: false,
+            async: true,
+            success: function (data) {
+
+                endereco = data;
+                //console.log(endereco);
+                jQuery(endereco).each(function (index, end) {
+                    jQuery("#versiculos").append(jQuery("<p>").append(index + 1 + ' ' + end.Formatado));
+                });
+            }
+        });
+    });
+
+</script>
