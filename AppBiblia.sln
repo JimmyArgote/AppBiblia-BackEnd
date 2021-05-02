@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliaEndPoint", "BibliaFrontEnd\BibliaEndPoint.csproj", "{F9BB002A-CFF6-45D4-9514-B8D1C9F46807}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliaFrontEnd", "BibliaFrontEnd\BibliaFrontEnd.csproj", "{F9BB002A-CFF6-45D4-9514-B8D1C9F46807}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliaFrontEndCore", "BibliaFrontEndCore\BibliaFrontEndCore.csproj", "{1ED8B9A0-A63E-4C87-AAC3-A408AE8C902A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliaFrontEndCore", "BibliaFrontEndCore\BibliaFrontEndCore.csproj", "{1ED8B9A0-A63E-4C87-AAC3-A408AE8C902A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
